@@ -1,3 +1,4 @@
+import sys
 import os
 import getpass
 import datetime
@@ -38,13 +39,16 @@ if os.name == 'nt':
 	print("===== Files will be backed up to " + destination + " =====")
 
 	# promp user for what to backup
-	source = get_source_file()
+	if sys.argv[1] == '':
+		source = get_source_file()
+	else:
+		source = os.path.join("C:\\Users\\" + getpass.getuser(), sys.argv[1])
 	print("===== " + source + " will be backed up =====")
 	print("[====== Wait for confirmation \"done\" ======]")
 
-	# create destination folder and copy over the files
+	#create destination folder and copy over the files
 	try:
-		copytree(source, destination)
+		copytree(source,destination)
 	except:
 		print("Could not create backup folder. Exiting\nDid NOT backup\n")
 		exit(0)
