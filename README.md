@@ -22,3 +22,11 @@ When prompted for the source folder, type:
   * to backup the directory the Backups.py file is currently in
 * \<filepath\>
   * C:\\Users\\\<username\> is included for you. See example above.
+  
+---
+
+## Update:
+When being from command prompt the user can now specify a folder to copy immediately.  
+<b>Ex. >Backups.py Documents\Important</b>  
+This will not prompt the user for further input and will proceed to create a backup of the  
+C:\\Users\\\<username\>\\Documents\\Important folder.
