@@ -56,3 +56,4 @@ if os.name == 'nt':
 # if OS is not windows, end prematurely
 else:
 	print("This program currently only works on Windows operating systems.")
+print("hello")
