@@ -12,7 +12,7 @@ def get_source_file():
 	user_input = input()
 	source = os.path.join("C:\\Users\\" + getpass.getuser(), user_input)
 	if user_input.lower() == 'exit':
-		print("Terminated\n\n")
+		print("Terminated\n\n") #this is if the use prints 'exit'
 		exit(0)
 	elif user_input.lower() == 'here':
 		return os.getcwd()
